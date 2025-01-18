@@ -20,10 +20,10 @@ def initialize_models():
     dict: A dictionary where the keys are model names and the values are initialized model instances.
     """
     model_dict = {
-        "RF": RandomForestRegressor(n_estimators=100, max_depth=15, random_state=42),
-        "XGB": xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100, max_depth=7, random_state=42),
-        "LGBM": lgb.LGBMRegressor(n_estimators=100, max_depth=7, random_state=42),
-        "GB": GradientBoostingRegressor(n_estimators=100, max_depth=7, random_state=42),
+        "RF": RandomForestRegressor(n_estimators=30, max_depth=15, random_state=42),
+        "XGB": xgb.XGBRegressor(objective='reg:squarederror', n_estimators=30, max_depth=7, random_state=42),
+        "LGBM": lgb.LGBMRegressor(n_estimators=130, max_depth=7, random_state=42),
+        "GB": GradientBoostingRegressor(n_estimators=30, max_depth=7, random_state=42),
         "LR": LinearRegression(),
         "BR": BayesianRidge(),
         "KNN": KNeighborsRegressor(n_neighbors=5),

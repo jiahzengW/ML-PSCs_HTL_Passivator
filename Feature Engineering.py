@@ -63,11 +63,6 @@ def extract_features(molecules):
             feature_set.append(Descriptors.NumHDonors(mol))  # Number of hydrogen bond donors
             feature_set.append(Descriptors.NumHAcceptors(mol))  # Number of hydrogen bond acceptors
             
-            # Estimated melting point based on molecular weight and TPSA
-            mw = Descriptors.MolWt(mol)
-            tpsa = rdMolDescriptors.CalcTPSA(mol)
-            melt_pt = 0.5 * tpsa + 0.2 * mw
-            feature_set.append(melt_pt)
             
             # Steric hindrance based on molecular volume and rotatable bonds
             mol_volume = Descriptors.MolMR(mol)

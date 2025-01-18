@@ -45,8 +45,6 @@ def plot_dependence(shap_vals, features_df, keys, save_dir):
         ax = plt.gca()
         for spine in ax.spines.values():
             spine.set_visible(True)
-            spine.set_linewidth(2.5)
-            spine.set_color('black')
         plt.tick_params(axis='both', labelsize=20)
         plt.tight_layout()
         plt.show()
@@ -61,8 +59,6 @@ def plot_pair_dependence(shap_vals, features_df, pairs, save_dir):
         ax = plt.gca()
         for spine in ax.spines.values():
             spine.set_visible(True)
-            spine.set_linewidth(2.5)
-            spine.set_color('black')
         plt.tick_params(axis='both', labelsize=24)
         plt.tight_layout()
         plt.show()
@@ -82,11 +78,8 @@ def main(model, test_df, feature_mapping, selected_features, key_features, featu
 
 
     plot_summary(shap_vals, ordered_features, summary_path)
-    
     plot_dependence(shap_vals, ordered_features, key_features, save_dir)
-    
     plot_pair_dependence(shap_vals, ordered_features, feature_pairs, save_dir)
-    
     plot_force(explainer, shap_vals, ordered_features, sample_count=3, save_dir=save_dir)
 
 if __name__ == "__main__":

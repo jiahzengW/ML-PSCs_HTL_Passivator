@@ -8,7 +8,6 @@ from sklearn.impute import SimpleImputer
 def load_data(filepath):
     """
     Loads the data from the specified CSV file, handling potential errors if the file is not found.
-
     Parameters:
     filepath (str): The path to the CSV file containing the dataset.
 

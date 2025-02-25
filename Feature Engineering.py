@@ -42,6 +42,7 @@ def generate_fingerprints(molecules):
 
     return np.array(maccs_fp), np.array(ecfp_fp), np.array(morgan_fp)
 
+
 # Function to extract molecular features based on RDKit descriptors.
 def extract_features(molecules):
     """

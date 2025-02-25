@@ -13,6 +13,7 @@ def prepare_features(test_df, feature_mapping, selected_features):
     ordered = renamed[selected_features]
     return ordered
 
+
 def extract_shap_values(shap_vals, original_features, selected_features):
     indices = [original_features.index(name) for name in selected_features if name in original_features]
     selected_shap = shap_vals[:, indices]
